@@ -20,6 +20,16 @@
             .justificado {
                 text-align: justify;
             }
+            .input {
+                position: absolute;
+                opacity: 0;
+                filter:alpha(opacity=0);
+            }
+            body {
+                background-image : url("assets/img/silla.jpg");
+                background-repeat:no-repeat;
+                background-position: center center;
+            }
         </style>
     </head>
     <body class="d-flex flex-column h-100 bg-light">
@@ -33,8 +43,8 @@
                         <ul class="navbar-nav ms-auto mb-2 mb-lg-0 small fw-bolder">
                             <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
                             <li class="nav-item"><a class="nav-link" href="curriculum.html">Curriculum</a></li>
-                            <li class="nav-item"><a class="nav-link" href="encuentro1.html">1° Encuentro</a></li>
-                            <li class="nav-item"><a class="nav-link" href="encuentro2.html">2° Encuentro</a></li>
+                            <li class="nav-item"><a class="nav-link" href="assets/pdf/Memorias 1ro encuentro.pdf" target="_blank">1° Encuentro</a></li>
+                            <li class="nav-item"><a class="nav-link" href="assets/pdf/Memorias 1ro encuentro.pdf" target="_blank">2° Encuentro</a></li>
                         </ul>
                     </div>
                 </div>
@@ -42,12 +52,18 @@
             <!-- Page Content-->
             <div class="container px-5 my-5">
                 <div class="text-center mb-5">
-                    <h1 class="display-5 fw-bolder mb-0"><span class="text-gradient d-inline">Mi Blog</span></h1>
+                    <div class="row justify-content-center">
+                        <div class="col-auto"><button class="btn btn-primary" onclick="mostrar_nacionales()">Ponencias Nacionales</button></div>
+                        <div class="col-auto"><button class="btn btn-primary" onclick="mostrar_internacionales()">Ponencias Internacionales</button></div>
+                        <div class="col-auto"><button class="btn btn-primary" onclick="mostrar_publicaciones()">Publicaciones</button></div>
+                        <div class="col-auto"><button class="btn btn-primary" onclick="mostrar_diplomados()">Diplomados</button></div>
+                        <div class="col-auto"><button class="btn btn-primary" onclick="mostrar_notas()">Notas</button></div>
+                    </div>
                 </div>
                 <div class="row gx-5 justify-content-center">
                     <div class="col-lg-11 col-xl-9 col-xxl-8">
                         <!-- Experience Section-->
-                        <section>
+                        <section id="ponencias_internacioanles" style="display: none;">
                             <div class="d-flex align-items-center justify-content-between mb-4">
                                 <h2 class="text-primary fw-bolder mb-0">Ponencias Internacionales</h2>
                             </div>
@@ -64,6 +80,8 @@
                                     </div>
                                 </div>
                             </div>
+                        </section>
+                        <section id="ponencias_nacioanles" style="display: none;">
                             <div class="d-flex align-items-center justify-content-between mb-4">
                                 <h2 class="text-primary fw-bolder mb-0">Ponencias Nacionales</h2>
                             </div>
@@ -89,7 +107,7 @@
                             </div>
                         </section>
                         <!-- Education Section-->
-                        <section>
+                        <section  id="publicaciones" style="display: none;">
                             <h2 class="text-secondary fw-bolder mb-4">Publicaciónes</h2>
                             <!-- Publicacion 1-->
                             <div class="card shadow border-0 rounded-4 mb-5">
@@ -97,38 +115,16 @@
                                     <div class="row align-items-center gx-5">
                                         <div class="col text-center text-lg-start mb-4 mb-lg-0">
                                             <div class="bg-light p-4 rounded-4">
-                                                <div class="text-secondary fw-bolder mb-2">
-                                                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#moda1">
-                                                        Consultar
-                                                    </button>
-                                                </div>
                                                 <div class="mb-2">
+                                                    <div class="">Libro</div>
                                                 </div>
                                                 <div class="fst-italic">
-                                                    <div class="small text-muted">Conflictos sociales y confrontaciones de derechos en América Latina</div>
+
+                                                    <div class="small">Conflictos sociales y confrontaciones de derechos en América Latina</div>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="col-lg-8 justificado"><div>Los límites del organismo no jurisdiccional al defensor de los derechos humanos en México en caso de conflictos y protestas sociales frente al poder político.</div></div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Modal Publicaciones 1 -->
-                            <div class="modal fade" id="moda1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                <div class="modal-dialog">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <h5 class="modal-title" id="exampleModalLabel">Conflictos sociales y confrontaciones de derechos en América Latina</h5>
-                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                        </div>
-                                        <div class="modal-body">
-                                            <iframe src="">
-                                            </iframe>
-                                        </div>
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -139,38 +135,15 @@
                                     <div class="row align-items-center gx-5">
                                         <div class="col text-center text-lg-start mb-4 mb-lg-0">
                                             <div class="bg-light p-4 rounded-4">
-                                                <div class="text-secondary fw-bolder mb-2">
-                                                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#moda2">
-                                                        Consultar
-                                                    </button>
-                                                </div>
                                                 <div class="mb-2">
+                                                    <div class="">Libro</div>
                                                 </div>
                                                 <div class="fst-italic">
-                                                    <div class="small text-muted">La transversalidad de los derechos humanos en México</div>
+                                                    <div class="small">La transversalidad de los derechos humanos en México</div>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="col-lg-8 justificado"><div>Los derechos humanos en la democracia como forma de vida.</div></div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Modal Publicaciones 2 -->
-                            <div class="modal fade" id="moda2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                <div class="modal-dialog">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <h5 class="modal-title" id="exampleModalLabel">La transversalidad de los derechos humanos en México</h5>
-                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                        </div>
-                                        <div class="modal-body">
-                                            <iframe src="">
-                                            </iframe>
-                                        </div>
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -181,38 +154,15 @@
                                     <div class="row align-items-center gx-5">
                                         <div class="col text-center text-lg-start mb-4 mb-lg-0">
                                             <div class="bg-light p-4 rounded-4">
-                                                <div class="text-secondary fw-bolder mb-2">
-                                                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#moda3">
-                                                        Consultar
-                                                    </button>
-                                                </div>
                                                 <div class="mb-2">
+                                                    <div class="">Libro</div>
                                                 </div>
                                                 <div class="fst-italic">
-                                                    <div class="small text-muted">Derechos humanos, seguridad y justicia</div>
+                                                    <div class="small">Derechos humanos, seguridad y justicia</div>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="col-lg-8 justificado"><div>Los derechos humanos en la arquitectura contemporánea del Estado constitucional democrático.</div></div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Modal Publicaciones 3 -->
-                            <div class="modal fade" id="moda3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                <div class="modal-dialog">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <h5 class="modal-title" id="exampleModalLabel">Derechos humanos, seguridad y justicia</h5>
-                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                        </div>
-                                        <div class="modal-body">
-                                            <iframe src="">
-                                            </iframe>
-                                        </div>
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -223,38 +173,15 @@
                                     <div class="row align-items-center gx-5">
                                         <div class="col text-center text-lg-start mb-4 mb-lg-0">
                                             <div class="bg-light p-4 rounded-4">
-                                                <div class="text-secondary fw-bolder mb-2">
-                                                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal4">
-                                                        Consultar
-                                                    </button>
-                                                </div>
                                                 <div class="mb-2">
+                                                    <div class="">Libro</div>
                                                 </div>
                                                 <div class="fst-italic">
-                                                    <div class="small text-muted">Los retos en materia de derechos humanos, autonomía universitaria, rendición de cuentas y combate a la corrupción e impunidad</div>
+                                                    <div class="small">Los retos en materia de derechos humanos, autonomía universitaria, rendición de cuentas y combate a la corrupción e impunidad</div>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="col-lg-8 justificado"><div>La autonomía universitaria en la Universidad Michoacana de San Nicolás de Hidalgo a cien años de su fundación.</div></div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Modal Publicaciones 4 -->
-                            <div class="modal fade" id="modal4" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                <div class="modal-dialog">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <h5 class="modal-title" id="exampleModalLabel">Los retos en materia de derechos humanos, autonomía universitaria, rendición de cuentas y combate a la corrupción e impunidad</h5>
-                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                        </div>
-                                        <div class="modal-body">
-                                            <iframe src="">
-                                            </iframe>
-                                        </div>
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -265,12 +192,8 @@
                                     <div class="row align-items-center gx-5">
                                         <div class="col text-center text-lg-start mb-4 mb-lg-0">
                                             <div class="bg-light p-4 rounded-4">
-                                                <div class="text-secondary fw-bolder mb-2">
-                                                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal5">
-                                                        Consultar
-                                                    </button>
-                                                </div>
                                                 <div class="mb-2">
+                                                    <div>Libro</div>
                                                 </div>
                                                 <div class="fst-italic">
                                                     <div class="small text-muted">Participación ciudadana y políticas públicas y En defensa de los derechos fundamentales</div>
@@ -282,37 +205,14 @@
                                 </div>
                             </div>
 
-                            <!-- Modal Publicaciones 5 -->
-                            <div class="modal fade" id="modal5" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                <div class="modal-dialog">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <h5 class="modal-title" id="exampleModalLabel">Participación ciudadana y políticas públicas y En defensa de los derechos fundamentales</h5>
-                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                        </div>
-                                        <div class="modal-body">
-                                            <iframe src="">
-                                            </iframe>
-                                        </div>
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
                             <!-- Publicacion 6 -->
                             <div class="card shadow border-0 rounded-4 mb-5">
                                 <div class="card-body p-5">
                                     <div class="row align-items-center gx-5">
                                         <div class="col text-center text-lg-start mb-4 mb-lg-0">
                                             <div class="bg-light p-4 rounded-4">
-                                                <div class="text-secondary fw-bolder mb-2">
-                                                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal6">
-                                                        Consultar
-                                                    </button>
-                                                </div>
                                                 <div class="mb-2">
+                                                    <div>Libro</div>
                                                 </div>
                                                 <div class="fst-italic">
                                                     <div class="small text-muted">El derecho a la información y su relación con la sociedad actual</div>
@@ -324,37 +224,14 @@
                                 </div>
                             </div>
 
-                            <!-- Modal Publicaciones 6 -->
-                            <div class="modal fade" id="modal6" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                <div class="modal-dialog">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <h5 class="modal-title" id="exampleModalLabel">El derecho a la información y su relación con la sociedad actual</h5>
-                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                        </div>
-                                        <div class="modal-body">
-                                            <iframe src="">
-                                            </iframe>
-                                        </div>
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
                             <!-- Publicacion 7 -->
                             <div class="card shadow border-0 rounded-4 mb-5">
                                 <div class="card-body p-5">
                                     <div class="row align-items-center gx-5">
                                         <div class="col text-center text-lg-start mb-4 mb-lg-0">
                                             <div class="bg-light p-4 rounded-4">
-                                                <div class="text-secondary fw-bolder mb-2">
-                                                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal7">
-                                                        Consultar
-                                                    </button>
-                                                </div>
                                                 <div class="mb-2">
+                                                    <div>Libro</div>
                                                 </div>
                                                 <div class="fst-italic">
                                                     <div class="small text-muted">Diálogos universitarios sobre los derechos humanos</div>
@@ -365,30 +242,11 @@
                                     </div>
                                 </div>
                             </div>
-
-                            <!-- Modal Publicaciones 7 -->
-                            <div class="modal fade" id="modal7" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                <div class="modal-dialog">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <h5 class="modal-title" id="exampleModalLabel">Diálogos universitarios sobre los derechos humanos</h5>
-                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                        </div>
-                                        <div class="modal-body">
-                                            <iframe src="">
-                                            </iframe>
-                                        </div>
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
                         </section>
                         <!-- Divider-->
                         <div class="pb-5"></div>
                         <!-- Skills Section-->
-                        <section>
+                        <section id="diplomados" style="display: none;">
                             <h2 class="text-secondary fw-bolder mb-4">Diplomados Impartidos</h2>
                             <div class="card shadow border-0 rounded-4 mb-5">
                                 <div class="card-body p-5">
@@ -396,7 +254,7 @@
                                         <div class="col text-center text-lg-start mb-4 mb-lg-0">
                                             <div class="bg-light p-4 rounded-4">
                                                 <div class="fst-italic">
-                                                    <div class="small text-muted">Acceso a la Justicia en Materia de Derechos Humanos</div>
+                                                    <div class="small text-monospace">Acceso a la Justicia en Materia de Derechos Humanos</div>
                                                 </div>
                                             </div>
                                         </div>
@@ -410,7 +268,7 @@
                                         <div class="col text-center text-lg-start mb-4 mb-lg-0">
                                             <div class="bg-light p-4 rounded-4">
                                                 <div class="fst-italic">
-                                                    <div class="small text-muted">Juicio de Amparo</div>
+                                                    <div class="small text-monospace">Juicio de Amparo</div>
                                                 </div>
                                             </div>
                                         </div>
@@ -424,7 +282,7 @@
                                         <div class="col text-center text-lg-start mb-4 mb-lg-0">
                                             <div class="bg-light p-4 rounded-4">
                                                 <div class="fst-italic">
-                                                    <div class="small text-muted">La Suprema Corte y los Derechos Humanos</div>
+                                                    <div class="small text-monospace">La Suprema Corte y los Derechos Humanos</div>
                                                 </div>
                                             </div>
                                         </div>
@@ -453,8 +311,38 @@
             </div>
         </footer>
         <!-- Bootstrap core JS-->
+        <script src="js/scripts.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
         <!-- Core theme JS-->
         <script src="js/scripts.js"></script>
+        <script>
+            
+            function mostrar_nacionales() {
+                document.getElementById("ponencias_nacioanles").style.display = "block";
+                document.getElementById("ponencias_internacioanles").style.display = "none";
+                document.getElementById("publicaciones").style.display = "none";
+                document.getElementById("diplomados").style.display = "none";
+            }
+            function mostrar_internacionales() {
+                document.getElementById("ponencias_nacioanles").style.display = "none";
+                document.getElementById("ponencias_internacioanles").style.display = "block";
+                document.getElementById("publicaciones").style.display = "none";
+                document.getElementById("diplomados").style.display = "none"
+            }
+            function mostrar_publicaciones() {
+                document.getElementById("ponencias_nacioanles").style.display = "none";
+                document.getElementById("ponencias_internacioanles").style.display = "none";
+                document.getElementById("publicaciones").style.display = "block";
+                document.getElementById("diplomados").style.display = "none"
+            }
+            function mostrar_diplomados() {
+                document.getElementById("ponencias_nacioanles").style.display = "none";
+                document.getElementById("ponencias_internacioanles").style.display = "none";
+                document.getElementById("publicaciones").style.display = "none";
+                document.getElementById("diplomados").style.display = "block"
+            }
+        </script>
     </body>
 </html>

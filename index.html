@@ -17,10 +17,26 @@
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
         <style>
+            html,
+            body { overflow-x: hidden; }
             .justificado {
                 text-align: justify;
             }
+            .este {
+                height: 5em;
+                line-height: 1em;
+                overflow-x: hidden;
+                overflow-y: scroll;
+                width: 100%;
+                border: 1px solid;
+            }
+            .input {
+                position: absolute;
+                opacity: 0;
+                filter:alpha(opacity=0);
+            }
         </style>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
     </head>
     <body class="d-flex flex-column h-100">
         <main class="flex-shrink-0">
@@ -33,8 +49,8 @@
                         <ul class="navbar-nav ms-auto mb-2 mb-lg-0 small fw-bolder">
                             <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
                             <li class="nav-item"><a class="nav-link" href="curriculum.html">Curriculum</a></li>
-                            <li class="nav-item"><a class="nav-link" href="encuentro1.html">1° Encuentro</a></li>
-                            <li class="nav-item"><a class="nav-link" href="encuentro2.html">2° Encuentro</a></li>
+                            <li class="nav-item"><a class="nav-link" href="assets/pdf/Memorias 1ro encuentro.pdf" target="_blank">1° Encuentro</a></li>
+                            <li class="nav-item"><a class="nav-link" href="assets/pdf/Memorias 1ro encuentro.pdf" target="_blank">2° Encuentro</a></li>
                         </ul>
                     </div>
                 </div>
@@ -46,14 +62,14 @@
                         <div class="col-xxl-5">
                             <!-- Header text content-->
                             <div class="text-center text-xxl-start">
-                                <div class="fs-3 fw-light text-muted">Ándres Médina Guzmán</div>
+                                <div class="fs-3 fw-light "><p>Ándres Médina Guzmán</p></div>
                             </div>
                         </div>
                         <div class="col-xxl-12">
                             <!-- Header profile picture-->
                             <div class="d-flex justify-content-center mt-12 mt-xxl-0">
                                 <div class="profile bg-gradient-primary-to-secondary">
-                                    <img class="profile-img" src="assets/img/portada.jpeg"/>
+                                    <img class="profile-img" src="assets/img/portada.jpg"/>
                                 </div>
                             </div>
                         </div>
@@ -63,19 +79,21 @@
 
 
             <!-- Noticias -->
-            <section class="bg-light py-5">
+            <section class="bg-light py-5 justify-content-center ">
                 <div class="container px-5">
-                    <div class="row gx-5 justify-content-center">
+                    <h2 class="display-5">
+                        <button onclick="mostrar()"><span class="text-gradient d-inline">Acerca de mi</span></h2></button>
+                    <div class="row gx-5 justify-content-center" id="contenido">
                         <div class="col-xxl-8">
                             <div class="text-center my-5">
-                                <h2 class="display-5 fw-bolder"><span class="text-gradient d-inline">Acerca de</span></h2>
                                 <!-- Experience Card 1-->
                                 <div class="card shadow border-0 rounded-4 mb-5">
                                     <div class="card-body p-5">
                                         <div class="row align-items-justify gx-5">
                                             <div class="col text-center text-lg-start mb-4 mb-lg-0">
-                                                <div class="bg-light p-4 rounded-4">
-                                                    <div class="text-primary fw-bolder mb-2">Perfil</div>
+                                                <div class="bg-light p-4 rounded-4">        
+                                                    <input id="focus" class="input">
+                                                    <div class="text-primary fw-bolder mb-2"><i class="bi-book-fill"></i> Perfil </div>
                                                 </div>
                                             </div>
                                             <div class="col-lg-8 justificado">
@@ -93,7 +111,7 @@
                                         <div class="row align-items-center gx-5">
                                             <div class="col text-center text-lg-start mb-4 mb-lg-0">
                                                 <div class="bg-light p-4 rounded-4">
-                                                    <div class="text-primary fw-bolder mb-2">Competencias y aptitudes</div>
+                                                    <div class="text-primary fw-bolder mb-2"><i class="bi-book-fill"></i> Competencias y aptitudes</div>
                                                 </div>
                                             </div>
                                             <div class="col-lg-8 justificado"><div>
@@ -115,7 +133,7 @@
                                         <div class="row align-items-center gx-5">
                                             <div class="col text-center text-lg-start mb-4 mb-lg-0">
                                                 <div class="bg-light p-4 rounded-4">
-                                                    <div class="text-primary fw-bolder mb-2">Experiencia Profesional</div>
+                                                    <div class="text-primary fw-bolder mb-2"><i class="bi-book-fill"></i> Experiencia Profesional</div>
                                                 </div>
                                             </div>
                                             <div class="col-lg-8 justificado"><div>
@@ -142,7 +160,7 @@
                                     <div class="row align-items-center gx-5">
                                         <div class="col text-center text-lg-start mb-4 mb-lg-0">
                                             <div class="bg-light p-4 rounded-4">
-                                                <div class="text-primary fw-bolder mb-2">Formación Académica</div>
+                                                <div class="text-primary fw-bolder mb-2"><i class="bi-book-fill"></i> Formación Académica</div>
                                             </div>
                                         </div>
                                         <div class="col-lg-8 justificado"><div>
@@ -165,10 +183,10 @@
 
 
 
-                                <div class="d-flex justify-content-center fs-2 gap-4">
+                                <div class="d-flex justify-content-center fs-2 gap-4" id="focus_redes">
                                     <a class="text-gradient" href="#!"><i class="bi bi-twitter"></i></a>
-                                    <a class="text-gradient" href="#!"><i class="bi bi-facebook"></i></a>
-                                    <a class="text-gradient" href="#!"><i class="bi bi-instagram"></i></a>
+                                    <a class="text-gradient" href="https://www.facebook.com/share/18eYs3hXq9/?mibextid=wwXIfr" target="_blank"><i class="bi bi-facebook"></i></a>
+                                    <a class="text-gradient" href="https://www.instagram.com/andres_medinaguzman?igsh=dnFmNzM2MmZoaHho" target="_blank"><i class="bi bi-instagram"></i></a>
                                     <a class="text-gradient" href="#!"><i class="bi bi-tiktok"></i></a>
                                 </div>
                             </div>
@@ -177,18 +195,23 @@
                 </div>
             </section>
         </main>
-        <!-- Footer-->
-        <footer class="bg-white py-4 mt-auto">
-            <div class="container px-5">
-                <div class="row align-items-center justify-content-between flex-column flex-sm-row">
-                        <a class="small" href="contacto.html"></a>
-                    </div>
-                </div>
-            </div>
-        </footer>
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
         <!-- Core theme JS-->
         <script src="js/scripts.js"></script>
+        <script>
+            function mostrar() {
+                document.getElementById("contenido").style.display = "block";
+                document.getElementById("focus").focus();
+            }
+        </script>
+            
+        <script type="text/javascript">
+            $(document).ready(function(){
+                document.getElementById("contenido").style.display = "none";
+            });
+        </script>
     </body>
 </html>

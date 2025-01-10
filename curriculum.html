@@ -17,8 +17,10 @@
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
         <style>
-            .justificado {
-                text-align: justify;
+            body {
+                background-image : url("assets/img/ponencia.jpg");
+                background-repeat:no-repeat;
+                background-position: center center;
             }
         </style>
     </head>
@@ -27,123 +29,205 @@
             <!-- Navigation-->
             <nav class="navbar navbar-expand-lg navbar-light bg-white py-3">
                 <div class="container px-5">
-                    <a class="navbar-brand" href="index.html"><span class="fw-bolder text-primary">Start Bootstrap</span></a>
+                    <a class="navbar-brand" href="index.html"><span class="fw-bolder text-primary">Inicio</span></a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav ms-auto mb-2 mb-lg-0 small fw-bolder">
                             <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
                             <li class="nav-item"><a class="nav-link" href="curriculum.html">Curriculum</a></li>
-                            <li class="nav-item"><a class="nav-link" href="encuentro1.html">1° Encuentro</a></li>
-                            <li class="nav-item"><a class="nav-link" href="encuentro2.html">2° Encuentro</a></li>
+                            <li class="nav-item"><a class="nav-link" href="assets/pdf/Memorias 1ro encuentro.pdf" target="_blank">1° Encuentro</a></li>
+                            <li class="nav-item"><a class="nav-link" href="assets/pdf/Memorias 1ro encuentro.pdf" target="_blank">2° Encuentro</a></li>
                         </ul>
                     </div>
                 </div>
             </nav>
-            <!-- Projects Section-->
-            <section class="py-5">
-                <div class="container px-5 mb-5">
-                    <div class="text-center mb-5">
-                        <h1 class="display-5 fw-bolder mb-0"><span class="text-gradient d-inline">Mis expediente</span></h1>
-                        <img class="img-fluid" src="assets/img/cv.png" alt="..." />
-                    </div>
-                    <div class="row gx-5 justify-content-center">
-                        <div class="col-lg-11 col-xl-9 col-xxl-8">
-                            <!-- Project Card 1-->
-                            <div class="card overflow-hidden shadow rounded-4 border-0 mb-5">
-                                <div class="card-body p-0">
-                                    <div class="d-flex align-items-center">
-                                        <div class="p-5">
-                                            <h2 class="fw-bolder">Título</h2>
-                                            <p>Título obtenido en la Universidad Michoacana de San Nicolas de Higaldo</p>
-                                        </div>
-                                        <img class="img-fluid" src="assets/img/titulo.jpg" alt="..." />
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Project Card 2-->
-                            <div class="card overflow-hidden shadow rounded-4 border-0 mb-5">
-                                <div class="card-body p-0">
-                                    <div class="d-flex align-items-center">
-                                        <div class="p-5">
-                                            <h2 class="fw-bolder">Maestría en Derecho Procesal Constitucional </h2>
-                                            <p>Mención Honorífica por excelencia académica.</p>
-                                        </div>
-                                        <img class="img-fluid" src="assets/img/maestria.jpg" alt="..." />
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Project Card 3-->
-                            <div class="card overflow-hidden shadow rounded-4 border-0 mb-5">
-                                <div class="card-body p-0">
-                                    <div class="d-flex align-items-center">
-                                        <div class="p-5">
-                                            <h2 class="fw-bolder">Certificado  de calificaciones </h2>
-                                            <p>Facultad de Derecho de la Universidad Michoacana de San Nicolas de Higaldo.</p>
-                                        </div>
-                                        <img class="img-fluid" src="assets/img/certificado.jpg" alt="..." />
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Project Card 4-->
-                            <div class="card overflow-hidden shadow rounded-4 border-0 mb-5">
-                                <div class="card-body p-0">
-                                    <div class="d-flex align-items-center">
-                                        <div class="p-5">
-                                            <h2 class="fw-bolder">Universidad de Jaén</h2>
-                                            <p>Estancia de Investigación Jurídica.</p>
-                                        </div>
-                                        <img class="img-fluid" src="assets/img/Jaen.jpg" alt="..." />
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Project Card 5-->
-                            <div class="card overflow-hidden shadow rounded-4 border-0 mb-5">
-                                <div class="card-body p-0">
-                                    <div class="d-flex align-items-center">
-                                        <div class="p-5">
-                                            <h2 class="fw-bolder">Universidad de Pisa</h2>
-                                            <p>Diploma en Alta Formación en Justicia Constitucional y Tutela de Derechos Fundamentales.</p>
-                                        </div>
-                                        <img class="img-fluid" src="assets/img/pisa.jpg" alt="..." />
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Project Card 6-->
-                            <div class="card overflow-hidden shadow rounded-4 border-0 mb-5">
-                                <div class="card-body p-0">
-                                    <div class="d-flex align-items-center">
-                                        <div class="p-5">
-                                            <h2 class="fw-bolder">Centro de Estudios Jurídicos Carbonella</h2>
-                                            <p>Doctorante en Derecho.</p>
-                                        </div>
-                                        <img class="img-fluid" src="assets/img/Carbonell.jpg" alt="..." />
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+
+            <div class="container px-5 my-5">
+                <div class="text-center mb-5">
+                    <div class="row justify-content-center">
+                        <div class="col-auto"><button class="btn btn-primary" onclick="mostrar_curriculum()">Curriculum</button></div>
+                        <div class="col-auto"><button class="btn btn-primary" onclick="mostrar_titulo()">Título</button></div>
+                        <div class="col-auto"><button class="btn btn-primary" onclick="mostrar_maestria()">Maestria</button></div>
+                        <div class="col-auto"><button class="btn btn-primary" onclick="mostrar_certificado()">Certificado</button></div>
+                        <div class="col-auto"><button class="btn btn-primary" onclick="mostrar_jaen()">Universidad de Jaén</button></div>
+                        <div class="col-auto"><button class="btn btn-primary" onclick="mostrar_pisa()">Universidad de Pisa</button></div>
+                        <div class="col-auto"><button class="btn btn-primary" onclick="mostrar_carbonell()">Carbonell</button></div>
                     </div>
                 </div>
-            </section>
-            
+                <div class="row gx-5 justify-content-center">
+                    <div class="col-lg-11 col-xl-9 col-xxl-8">
+                        <!-- Experience Section-->
+                        <section id="coriculum" style="display: none;">
+                            <div class="d-flex align-items-center justify-content-between mb-4">
+                                <h2 class="text-primary fw-bolder mb-0">Curriculum</h2>
+                            </div>
+                            <!-- Experience Card 1-->
+                            <div class="card shadow border-0 rounded-4 mb-5">
+                                <div class="card-body p-5">
+                                    <div class="row align-items-center gx-5">
+                                        <div class="col-lg-12 justificado"><div>
+                                            <img src="assets/img/cv.png" width="100%" alt="..." />
+                                        </div></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <section id="titulo" style="display: none;">
+                            <div class="d-flex align-items-center justify-content-between mb-4">
+                                <h2 class="text-primary fw-bolder mb-0">Título Universitario</h2>
+                            </div>
+                            <div class="card shadow border-0 rounded-4 mb-5">
+                                <div class="card-body p-5">
+                                    <div class="row align-items-center gx-5">
+                                        <div class="col-lg-12 justificado"><div>
+                                            <img src="assets/img/titulo.jpg" alt="..." />
+                                        </div></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <section id="maestria" style="display: none;">
+                            <div class="d-flex align-items-center justify-content-between mb-4">
+                                <h2 class="text-primary fw-bolder mb-0">Maestría en Derecho Procesal Constitucional</h2>
+                            </div>
+                            <div class="card shadow border-0 rounded-4 mb-5">
+                                <div class="card-body p-5">
+                                    <div class="row align-items-center gx-5">
+                                        <div class="col-lg-12 justificado"><div>
+                                            <img src="assets/img/maestria.jpg" alt="..." />
+                                        </div></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <section id="certificado" style="display: none;">
+                            <div class="d-flex align-items-center justify-content-between mb-4">
+                                <h2 class="text-primary fw-bolder mb-0">Certificado  de calificaciones</h2>
+                            </div>
+                            <div class="card shadow border-0 rounded-4 mb-5">
+                                <div class="card-body p-5">
+                                    <div class="row align-items-center gx-5">
+                                        <div class="col-lg-12 justificado"><div>
+                                            <img src="assets/img/certificado.jpg" alt="..." />
+                                        </div></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <section id="jade" style="display: none;">
+                            <div class="d-flex align-items-center justify-content-between mb-4">
+                                <h2 class="text-primary fw-bolder mb-0">Universidad de Jaén</h2>
+                            </div>
+                            <div class="card shadow border-0 rounded-4 mb-5">
+                                <div class="card-body p-5">
+                                    <div class="row align-items-center gx-5">
+                                        <div class="col-lg-12 justificado"><div>
+                                            <img src="assets/img/Jaen.jpg" alt="..." />
+                                        </div></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <section id="pisa" style="display: none;">
+                            <div class="d-flex align-items-center justify-content-between mb-4">
+                                <h2 class="text-primary fw-bolder mb-0">Universidad de Pisa</h2>
+                            </div>
+                            <div class="card shadow border-0 rounded-4 mb-5">
+                                <div class="card-body p-5">
+                                    <div class="row align-items-center gx-5">
+                                        <div class="col-lg-12 justificado"><div>
+                                            <img src="assets/img/pisa.jpg" alt="..." />
+                                        </div></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <section id="carbonell" style="display: none;">
+                            <div class="d-flex align-items-center justify-content-between mb-4">
+                                <h2 class="text-primary fw-bolder mb-0">Centro de Estudios Jurídicos Carbonell</h2>
+                            </div>
+                            <div class="card shadow border-0 rounded-4 mb-5">
+                                <div class="card-body p-5">
+                                    <div class="row align-items-center gx-5">
+                                        <div class="col-lg-12 justificado"><div>
+                                            <img src="assets/img/Carbonell.jpg" alt="..." />
+                                        </div></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
         </main>
-        <!-- Footer-->
-        <footer class="bg-white py-4 mt-auto">
-            <div class="container px-5">
-                <div class="row align-items-center justify-content-between flex-column flex-sm-row">
-                    <div class="col-auto"><div class="small m-0"></div></div>
-                    <div class="col-auto">
-                        <a class="small" href="#!"></a>
-                        <span class="mx-1">&middot;</span>
-                        <a class="small" href="#!"></a>
-                        <span class="mx-1">&middot;</span>
-                        <a class="small" href="#!"></a>
-                    </div>
-                </div>
-            </div>
-        </footer>
+        
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
         <script src="js/scripts.js"></script>
+        <script>
+            
+            function mostrar_curriculum() {
+                document.getElementById("coriculum").style.display = "block";
+                document.getElementById("titulo").style.display = "none";
+                document.getElementById("maestria").style.display = "none";
+                document.getElementById("jade").style.display = "none";
+                document.getElementById("pisa").style.display = "none";
+                document.getElementById("carbonell").style.display = "none";
+                document.getElementById("certificado").style.display = "none";
+            }
+            function mostrar_titulo() {
+                document.getElementById("coriculum").style.display = "none";
+                document.getElementById("titulo").style.display = "block";
+                document.getElementById("maestria").style.display = "none";
+                document.getElementById("jade").style.display = "none";
+                document.getElementById("pisa").style.display = "none";
+                document.getElementById("carbonell").style.display = "none";
+                document.getElementById("certificado").style.display = "none";
+            }
+            function mostrar_maestria() {
+                document.getElementById("coriculum").style.display = "none";
+                document.getElementById("titulo").style.display = "none";
+                document.getElementById("maestria").style.display = "block";
+                document.getElementById("jade").style.display = "none";
+                document.getElementById("pisa").style.display = "none";
+                document.getElementById("carbonell").style.display = "none";
+                document.getElementById("certificado").style.display = "none";
+            }
+            function mostrar_certificado() {
+                document.getElementById("coriculum").style.display = "none";
+                document.getElementById("certificado").style.display = "block";
+                document.getElementById("titulo").style.display = "none";
+                document.getElementById("maestria").style.display = "none";
+                document.getElementById("jade").style.display = "none";
+                document.getElementById("pisa").style.display = "none";
+                document.getElementById("carbonell").style.display = "none";
+            }
+            function mostrar_jaen() {
+                document.getElementById("coriculum").style.display = "none";
+                document.getElementById("certificado").style.display = "none";
+                document.getElementById("titulo").style.display = "none";
+                document.getElementById("maestria").style.display = "none";
+                document.getElementById("jade").style.display = "block";
+                document.getElementById("pisa").style.display = "none";
+                document.getElementById("carbonell").style.display = "none";
+            }
+            function mostrar_pisa() {
+                document.getElementById("coriculum").style.display = "none";
+                document.getElementById("certificado").style.display = "none";
+                document.getElementById("titulo").style.display = "none";
+                document.getElementById("maestria").style.display = "none";
+                document.getElementById("jade").style.display = "none";
+                document.getElementById("pisa").style.display = "block";
+                document.getElementById("carbonell").style.display = "none";
+            }
+            function mostrar_carbonell() {
+                document.getElementById("coriculum").style.display = "none";
+                document.getElementById("certificado").style.display = "none";
+                document.getElementById("titulo").style.display = "none";
+                document.getElementById("maestria").style.display = "none";
+                document.getElementById("jade").style.display = "none";
+                document.getElementById("pisa").style.display = "none";
+                document.getElementById("carbonell").style.display = "block";
+            }
+        </script>
     </body>
 </html>
