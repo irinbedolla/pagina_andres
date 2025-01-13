@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Ándres Médina Guzmán</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Custom Google font-->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@100;200;300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet" />
+        <!-- Bootstrap icons-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" rel="stylesheet" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+        <style>
+            .justificado {
+                text-align: justify;
+            }
+            .input {
+                position: absolute;
+                opacity: 0;
+                filter:alpha(opacity=0);
+            }
+            body {
+                background-image : url("assets/img/silla.jpg");
+                background-repeat:no-repeat;
+                background-position: center center;
+            }
+        </style>
+    </head>
+    <body class="d-flex flex-column h-100 bg-light">
+        <main class="flex-shrink-0">
+            <!-- Navigation-->
+            <nav class="navbar navbar-expand-lg navbar-light bg-white py-3">
+                <div class="container px-5">
+                    <a class="navbar-brand" href="index.html"><span class="fw-bolder text-primary">Inicio</span></a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 small fw-bolder">
+                            <li class="nav-item"><a class="nav-link" href="ponencias.html">Ponencias</a></li>
+                            <li class="nav-item"><a class="nav-link" href="publicaciones.html">Publicaciones</a></li>
+                            <li class="nav-item"><a class="nav-link" href="curriculum.html">Curriculum</a></li>
+                            <li class="nav-item"><a class="nav-link" href="assets/pdf/Memorias 1ro encuentro.pdf" target="_blank">1° Encuentro</a></li>
+                            <li class="nav-item"><a class="nav-link" href="assets/pdf/Memorias 1ro encuentro.pdf" target="_blank">2° Encuentro</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <!-- Page Content-->
+            <div class="container px-5 my-5">
+                <div class="text-center mb-10">
+                    <div class="row justify-content-center">
+                        <div class="col-sm-6 col-md-2"><button style="width: 100%;" class="btn btn-primary" onclick="mostrar_nacionales()">Ponencias Nacionales</button></div>
+                        <div class="col-sm-6 col-md-2"><button style="width: 100%;" class="btn btn-primary" onclick="mostrar_internacionales()">Ponencias Internacionales</button></div>
+                    </div>
+                </div>
+                <div class="row gx-5 justify-content-center">
+                    <div class="col-lg-11 col-xl-9 col-xxl-8">
+                        <!-- Experience Section-->
+                        <section id="ponencias_internacioanles" style="display: none;">
+                            <div class="d-flex align-items-center justify-content-between mb-4">
+                                <h2 class="text-primary fw-bolder mb-0">Ponencias Internacionales</h2>
+                            </div>
+                            <!-- Experience Card 1-->
+                            <div class="card shadow border-0 rounded-4 mb-5">
+                                <div class="card-body p-5">
+                                    <div class="row align-items-center gx-5">
+                                        <div class="col-lg-12 justificado"><div>
+                                            He sido expositor en eventos de alto impacto como en:<br>
+                                            °XIV Congreso Nacional y IV Latinoamericano de Sociología Jurídica en Córdoba, Argentina.<br>
+                                            °XII Congreso Iberoamericano de Derecho Constitucional en Bogotá, Colombia.<br>
+                                            °Corso di Alta Formazione in Giustizia Costituzionale e Tutela Giurisdizionale dei Diritti Universidad de Pisa.<br>
+                                            </div></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <section id="ponencias_nacioanles" style="display: none;">
+                            <div class="d-flex align-items-center justify-content-between mb-4">
+                                <h2 class="text-primary fw-bolder mb-0">Ponencias Nacionales</h2>
+                            </div>
+                            <!-- Experience Card 2-->
+                            <div class="card shadow border-0 rounded-4 mb-5">
+                                <div class="card-body p-5">
+                                    <div class="row align-items-center gx-5">
+                                        <div class="col-lg-12 justificado"><div>
+                                            He tenido el honor de participar en eventos destacados como:<br>
+                                            °El 10° Congreso Nacional de Organismos Públicos Autónomos de México, donde expuse en la Mesa 6: Transversalización de los Derechos Humanos.<br><br>
+                                            °En el 11° Congreso Nacional de Organismos Públicos Autónomos, con una ponencia en la Mesa de Reflexión: Retos de la Autonomía Universitaria.<br><br>
+                                            °Primer Foro Regional "Sistemas Anticorrupción, Cultura de la Legalidad y la Transparencia", participando en la Mesa 1: Sistemas Anticorrupción.<br><br>
+                                            °La estructura constitucional anticorrupción en México, presentado en el Instituto de Investigaciones Jurídicas de la Universidad Veracruzana.<br> <br>
+                                            °La constitución como garantía al derecho de la información, dentro del Primer Seminario Internacional Justicia Alternativa y Derechos Sociales México-España.<br><br>
+                                            °Mesa de Diálogo: Justicia Constitucional Comparada, con un análisis sobre La epistemología de los derechos fundamentales en la División de Estudios de Posgrado de la Facultad de Derecho y Ciencias Sociales, UMSNH.<br><br>
+                                            °El análisis de sentencias bajo el Protocolo de Actuación para quienes imparten justicia en casos que involucren personas migrantes y sujetas de protección internacional.<br><br>
+                                            °Exposiciones en el Coloquio Internacional "Derechos Humanos, Estudios de Género y Transparencia".<br><br>
+                                            °El Seminario: "Hacia una Justicia Constitucional Local en la Ciudad de México. Análisis Comparado, Reflexiones y Perspectivas".<br><br>
+                                            Estas participaciones, en eventos como el 1er Congreso Nacional de Estudios en Derecho Cultural y el foro Constitucionalismo y Derechos Fundamentales en las Entidades Federativas, han sido una oportunidad invaluable para fomentar el análisis jurídico y contribuir al fortalecimiento de la justicia y la equidad en el sistema jurídico mexicano.    
+                                        </div></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+        </main>
+        <!-- Footer-->
+        <footer class="bg-white py-4 mt-auto">
+            <div class="container px-5">
+                <div class="row align-items-center justify-content-between flex-column flex-sm-row">
+                    <div class="col-auto"><div class="small m-0"></div></div>
+                    <div class="col-auto">
+                        <a class="small" href="#!"></a>
+                        <span class="mx-1">&middot;</span>
+                        <a class="small" href="#!"></a>
+                        <span class="mx-1">&middot;</span>
+                        <a class="small" href="#!"></a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- Bootstrap core JS-->
+        <script src="js/scripts.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+        <script>
+            
+            function mostrar_nacionales() {
+                document.getElementById("ponencias_nacioanles").style.display = "block";
+                document.getElementById("ponencias_internacioanles").style.display = "none";
+                document.getElementById("publicaciones").style.display = "none";
+                document.getElementById("diplomados").style.display = "none";
+            }
+            function mostrar_internacionales() {
+                document.getElementById("ponencias_nacioanles").style.display = "none";
+                document.getElementById("ponencias_internacioanles").style.display = "block";
+                document.getElementById("publicaciones").style.display = "none";
+                document.getElementById("diplomados").style.display = "none"
+            }
+        </script>
+    </body>
+</html>
